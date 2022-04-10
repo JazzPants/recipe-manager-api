@@ -85,3 +85,26 @@ Restaurant.create!(
   location: 'Sydney',
   pricing: 'high',
 )
+
+Review.create!(
+  content:
+    'Vel fuga odio qui nemo commodi aut magnam quos qui provident perspiciatis. Et sint temporibus eos voluptatem praesentium qui officia voluptate quo reprehenderit eveniet est dolorem unde ut molestias Quis. Et aperiam architecto in neque esse hic accusantium atque.
+
+Aut quasi commodi ut excepturi soluta ut porro asperiores et nostrum quidem et dolorem veniam! Et ullam voluptate qui eaque quae aut aliquid sequi ut alias veritatis.',
+  user_id: 1,
+  restaurant_id: 1,
+)
+
+Review.create!(
+  content:
+    'Odit ullam est architecto nihil in ullam neque eos accusantium vero. Ut recusandae esse sit dolores numquam est dolores accusantium rem ullam animi ut velit dolore sit quisquam totam qui quia assumenda. Ea enim reiciendis sed aspernatur iure et consequatur minima.',
+  user_id: 2,
+  restaurant_id: 1,
+)
+
+Review.create!(
+  content:
+    'Est numquam laborum et alias autem et laboriosam dignissimos. Hic facilis cumque et perferendis libero est laborum amet. Rem exercitationem velit ut ipsum consectetur et aspernatur ut nulla minima.',
+  user_id: 3,
+  restaurant_id: 1,
+)
