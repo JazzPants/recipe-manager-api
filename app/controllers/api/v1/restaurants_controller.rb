@@ -1,9 +1,11 @@
 class Api::V1::RestaurantsController < ApplicationController
+  #GET fetch /restaurants
   def index
     restaurants = Restaurant.all
     render json: restaurants
   end
 
+  #GET fetch with Restaurant id in URL
   def show
     restaurant = Restaurant.find(params[:id])
     if restaurant
@@ -18,6 +20,7 @@ class Api::V1::RestaurantsController < ApplicationController
   #     @restaurant = Restaurant.new
   #   end
 
+  #POST fetch
   def create
     restaurant = Restaurant.new(restaurant_params)
 
@@ -32,6 +35,7 @@ class Api::V1::RestaurantsController < ApplicationController
   #       def edit
   #       end
 
+  #PATCH fetch
   def update
     restaurant = Restaurant.find(params[:id])
 
@@ -39,6 +43,7 @@ class Api::V1::RestaurantsController < ApplicationController
     render json: restaurant
   end
 
+  #DELETE fetch
   def destroy
     # @restaurant.destroy
     restaurant = Restaurant.find(params[:id])
