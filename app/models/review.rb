@@ -1,4 +1,6 @@
 class Review < ApplicationRecord
-    belongs_to :user
-    belongs_to :restaurant
+  validates :user_id, uniqueness: true
+  validates :restaurant_id, uniqueness: true
+  belongs_to :user
+  belongs_to :restaurant
 end
