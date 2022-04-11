@@ -4,6 +4,15 @@ class Api::V1::ReviewsController < ApplicationController
     render json: reviews
   end
 
+  def show
+    review = Review.find(params[:id])
+    if review
+      render json: review
+    else
+      render json: review.errors
+    end
+  end
+
   def create
     review = Review.new(review_params)
 
