@@ -1,5 +1,6 @@
 class Restaurant < ApplicationRecord
-    belongs_to :user
-    has_many :ratings, through: :users, dependent: :destroy
-    has_many :reviews, through: :users, dependent: :destroy
+  validates :name, uniqueness: true
+  belongs_to :user
+  has_many :ratings, through: :users, dependent: :destroy
+  has_many :reviews, through: :users, dependent: :destroy
 end
