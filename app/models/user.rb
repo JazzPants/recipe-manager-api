@@ -4,8 +4,8 @@ class User < ApplicationRecord
   validates :name, uniqueness: true
   validates :password,
             length: {
-              in: 6..20,
-              message: 'Your password must be betwen 6 to 20 characters',
+              minimum: 6,
+              message: 'Your password must be greater than 6 characters',
             }
 
   # , confirmation: true

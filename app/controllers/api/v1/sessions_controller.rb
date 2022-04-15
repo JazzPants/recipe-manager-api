@@ -11,9 +11,13 @@ class Api::V1::SessionsController < ApplicationController
     if user
       session[:user_id] = user.id
       puts "New session id: #{session[:user_id]}"
-      render json: user
+      render json: { status: :created, logged_in: true, user: user }
     else
-      render json: "#{params[:name]} does not exist, or password is incorrect."
+      render json: {
+               status: 401,
+               message:
+                 "#{params[:name]} does not exist, or password is incorrect.",
+             }
     end
   end
 

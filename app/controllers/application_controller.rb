@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  skip_before_action :verify_authenticity_token
   #TODO: need guard for "user-only dashboard, e.g. edit existing review
   # only if logged-in to the relevant user of that review"
   #---

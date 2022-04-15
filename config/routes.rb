@@ -3,7 +3,9 @@ Rails.application.routes.draw do
     namespace :v1 do
       get '/login' => 'sessions#new'
       post '/login' => 'sessions#create'
-      post '/logout' => 'sessions#destroy'
+
+      delete '/logout' => 'sessions#logout'
+      get 'logged_in' => 'sessions#logged_in'
       resources :users do
         resources :ratings
         resources :reviews
@@ -16,6 +18,7 @@ Rails.application.routes.draw do
   end
 end
 
+# post '/logout' => 'sessions#destroy'
 # resources :users do
 #   resources :ratings
 #   resources :reviews
