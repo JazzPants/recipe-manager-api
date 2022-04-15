@@ -1,4 +1,5 @@
 class Api::V1::SessionsController < ApplicationController
+  include CurrentUserConcern
   def new; end
 
   def create
@@ -19,6 +20,19 @@ class Api::V1::SessionsController < ApplicationController
                  "#{params[:name]} does not exist, or password is incorrect.",
              }
     end
+  end
+
+  def logged_in
+    if @current_user
+      render json: { logged_in: true, user: @current_user }
+    else
+      render json: { logged_in: false }
+    end
+  end
+
+  def logout
+    reset_session
+    render json: { status: 200, logged_out: true }
   end
 
   def destroy

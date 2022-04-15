@@ -5,7 +5,7 @@ Rails.application.routes.draw do
       post '/login' => 'sessions#create'
 
       delete '/logout' => 'sessions#logout'
-      get 'logged_in' => 'sessions#logged_in'
+      get '/logged_in' => 'sessions#logged_in'
       resources :users do
         resources :ratings
         resources :reviews
@@ -16,6 +16,7 @@ Rails.application.routes.draw do
       end
     end
   end
+  root to: 'static#home'
 end
 
 # post '/logout' => 'sessions#destroy'
