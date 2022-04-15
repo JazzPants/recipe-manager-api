@@ -7,11 +7,11 @@ class Api::V1::RestaurantsController < ApplicationController
 
   #GET fetch with Restaurant id in URL
   def show
-    restaurant = Restaurant.find(params[:id])
-    if restaurant
+    if Restaurant.exists?(params[:id])
+      restaurant = Restaurant.find(params[:id])
       render json: restaurant
     else
-      render json: restaurant.errors
+      render json: { message: "No restaurant exists with id: #{params[:id]}" }
     end
   end
 
