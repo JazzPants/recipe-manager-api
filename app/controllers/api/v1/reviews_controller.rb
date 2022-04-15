@@ -1,14 +1,16 @@
 class Api::V1::ReviewsController < ApplicationController
   def index
-    puts "HELLO HELLO #{params[:restaurant_id]}"
+    puts "HELLO HELLO RESTAURANT ID: #{params[:restaurant_id]}"
     if Review.exists?(restaurant_id: params[:restaurant_id])
       reviews = Review.where(restaurant_id: params[:restaurant_id])
       render json: reviews
     else
-      render json: {
-               message:
-                 "No reviews exist for restaurant with id: #{params[:restaurant_id]}",
-             }
+      render json: []
+
+      # {
+      #          message:
+      #            "No reviews exist for restaurant with id: #{params[:restaurant_id]}",
+      #        }
     end
   end
 
