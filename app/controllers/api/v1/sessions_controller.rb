@@ -3,9 +3,9 @@ class Api::V1::SessionsController < ApplicationController
   def new; end
 
   def create
-    user = User.find_by(name: params[:name])
-
-    user = user.try(:authenticate, params[:password])
+    user = User.find_by(name: params[:user][:name])
+    puts "THESE ARE THE PARAMS: #{params}!!!"
+    user = user.try(:authenticate, params[:user][:password])
 
     # @user = user
 

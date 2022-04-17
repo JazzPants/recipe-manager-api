@@ -9,8 +9,8 @@ class Api::V1::UsersController < ApplicationController
   def create
     user = User.new(user_params)
     if user.save
-      puts "CHECK CHECK 1..2..3.. #{session[:user_id]}"
       session[:user_id] = user.id
+      puts "CHECK CHECK 1..2..3.. #{session[:user_id]}"
       render json: { status: :created, user: user }
     else
       render json: user.errors
