@@ -1,7 +1,6 @@
 class Review < ApplicationRecord
-  validates :user_id, uniqueness: true
-
-  # validates :restaurant_id, uniqueness: true
+  # stop same user making reviews on same restaurant
+  validates_uniqueness_of :user_id, scope: :restaurant_id
   belongs_to :user
   belongs_to :restaurant
 end

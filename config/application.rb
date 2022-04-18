@@ -50,7 +50,7 @@ module RestaurantReviewApi
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore,
                           key: '_restaurant_review_cookie',
-                          expire_after: 1.minutes
+                          expire_after: 5.minutes
     config.middleware.insert_after(
       ActionDispatch::Cookies,
       ActionDispatch::Session::CookieStore,
