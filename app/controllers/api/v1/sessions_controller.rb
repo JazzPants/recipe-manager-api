@@ -1,6 +1,6 @@
 class Api::V1::SessionsController < ApplicationController
   include CurrentUserConcern
-  def new; end
+  before_action :set_current_user
 
   def create
     user = User.find_by(name: params[:user][:name])
@@ -24,7 +24,8 @@ class Api::V1::SessionsController < ApplicationController
   end
 
   def logged_in
-    if @current_user
+    puts "TESTING CURRENT USER: #{@current_user}"
+    if @_current_user
       render json: { logged_in: true, user: @current_user }
     else
       render json: { logged_in: false }
