@@ -14,17 +14,17 @@ class Api::V1::ReviewsController < ApplicationController
     end
   end
 
-  def show
-    if Review.exists?(params[:id])
-      review = Review.find(params[:id])
-      render json: review
-    else
-      render json: {
-               message:
-                 "No review exists with id: #{params[:id]} for restaurant with id: #{params[:restaurant_id]}",
-             }
-    end
-  end
+  # def show
+  #   if Review.exists?(params[:id])
+  #     review = Review.find(params[:id])
+  #     render json: review
+  #   else
+  #     render json: {
+  #              message:
+  #                "No review exists with id: #{params[:id]} for restaurant with id: #{params[:restaurant_id]}",
+  #            }
+  #   end
+  # end
 
   def create
     review = Review.new(review_params)

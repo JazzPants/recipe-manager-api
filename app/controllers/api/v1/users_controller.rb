@@ -4,6 +4,15 @@ class Api::V1::UsersController < ApplicationController
     render json: users, only: %i[id name]
   end
 
+  def show
+    if User.exists?(params[:id])
+      user = User.find(params[:id])
+      render json: user, only: %i[id name]
+    else
+      render json: { message: "No user exists with id: #{params[:id]}" }
+    end
+  end
+
   def create
     user = User.new(user_params)
     if user.save

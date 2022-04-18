@@ -7,12 +7,12 @@ Rails.application.routes.draw do
       delete '/logout' => 'sessions#logout'
       get '/logged_in' => 'sessions#logged_in'
       resources :users do
-        resources :ratings
-        resources :reviews
+        resources :ratings, only: [:index]
+        resources :reviews, only: [:index]
       end
       resources :restaurants do
-        resources :ratings
-        resources :reviews
+        resources :ratings, only: %i[index create update destroy]
+        resources :reviews, only: %i[index create update destroy]
       end
     end
   end
