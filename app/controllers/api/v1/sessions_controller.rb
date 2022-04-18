@@ -1,6 +1,5 @@
 class Api::V1::SessionsController < ApplicationController
   include CurrentUserConcern
-  before_action :set_current_user
 
   def create
     user = User.find_by(name: params[:user][:name])
@@ -24,16 +23,21 @@ class Api::V1::SessionsController < ApplicationController
   end
 
   def logged_in
-    puts "TESTING CURRENT USER: #{@current_user}"
+    puts "session #{session[:user_id]}"
     if @_current_user
-      render json: { logged_in: true, user: @current_user }
+      puts "TESTING CURRENT USER: #{@_current_user.name}"
+      render json: { logged_in: true, user: @_current_user }
     else
-      render json: { logged_in: false }
+      render json: { logged_in: false, user: @_current_user }
     end
   end
 
   def logout
+    puts "TESTING CURRENT USER: #{@_current_user.name}"
+
+    # reset_session works asynchronously?
     reset_session
+    puts "logging out #{@_current_user.name}!!!"
     render json: { status: 200, logged_out: true }
   end
 

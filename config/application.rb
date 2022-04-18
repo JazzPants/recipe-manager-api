@@ -48,10 +48,13 @@ module RestaurantReviewApi
     config.api_only = true
 
     config.middleware.use ActionDispatch::Cookies
-    config.middleware.use ActionDispatch::Session::CookieStore
+    config.middleware.use ActionDispatch::Session::CookieStore,
+                          key: '_restaurant_review_cookie',
+                          expire_after: 1.minutes
     config.middleware.insert_after(
       ActionDispatch::Cookies,
       ActionDispatch::Session::CookieStore,
+      key: '_restaurant_review_cookie',
     )
   end
 end
