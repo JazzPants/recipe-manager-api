@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 4) do
 
   create_table "ratings", force: :cascade do |t|
-    t.integer "value"
+    t.float "value"
     t.integer "user_id"
     t.integer "restaurant_id"
     t.datetime "created_at", precision: 6, null: false

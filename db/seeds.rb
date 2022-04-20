@@ -108,3 +108,9 @@ Review.create!(
   user_id: 3,
   restaurant_id: 1,
 )
+
+Rating.create!(value: 5, user_id: 1, restaurant_id: 1)
+
+Rating.create!(value: 5, user_id: 2, restaurant_id: 1)
+
+Rating.create!(value: 4, user_id: 3, restaurant_id: 1)
