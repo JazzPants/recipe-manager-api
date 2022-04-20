@@ -5,7 +5,7 @@ class Api::V1::RatingsController < ApplicationController
     if params[:restaurant_id] &&
          Rating.exists?(restaurant_id: params[:restaurant_id])
       ratings = Rating.where(restaurant_id: params[:restaurant_id])
-      render json: ratings
+      render json: ratings, only: %i[id value user_id restaurant_id]
     elsif params[:user_id] && Rating.exists?(user_id: params[:user_id])
       ratings = Rating.where(user_id: params[:user_id])
       render json: ratings, only: %i[id value user_id restaurant_id]
@@ -30,7 +30,7 @@ class Api::V1::RatingsController < ApplicationController
     rating = Rating.new(rating_params)
 
     if rating.save
-      render json: rating
+      render json: rating, only: %i[id value user_id restaurant_id]
     else
       render json: rating.errors
     end
@@ -39,8 +39,11 @@ class Api::V1::RatingsController < ApplicationController
   def update
     rating = Rating.find(params[:id])
 
-    rating.update(rating_params)
-    render json: rating
+    if rating.update(rating_params)
+      render json: rating, only: %i[id value user_id restaurant_id]
+    else
+      render json: rating.errors
+    end
   end
 
   private

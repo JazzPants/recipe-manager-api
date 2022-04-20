@@ -5,7 +5,7 @@ class Api::V1::ReviewsController < ApplicationController
     if params[:restaurant_id] &&
          Review.exists?(restaurant_id: params[:restaurant_id])
       reviews = Review.where(restaurant_id: params[:restaurant_id])
-      render json: reviews
+      render json: reviews, only: %i[id content user_id restaurant_id]
     elsif params[:user_id] && Review.exists?(user_id: params[:user_id])
       reviews = Review.where(user_id: params[:user_id])
       render json: reviews, only: %i[id content user_id restaurant_id]
