@@ -20,6 +20,8 @@ everyone!',
   category: 'Ramen',
   location: 'Sydney',
   pricing: 'average',
+  image:
+    'https://cdn.cafeata.com/photos/photo_0x6b12a5a93f0bbe85_0x3e0c6206b2661e00_1625287217108523.jpg',
 )
 
 Restaurant.create!(
@@ -30,6 +32,8 @@ Restaurant.create!(
   category: 'Ramen',
   location: 'Sydney',
   pricing: 'low',
+  image:
+    'https://cdn.cafeata.com/photos/photo_0x6b12a5a93f0bbe85_0x3e0c6206b2661e00_1625287217108523.jpg',
 )
 Restaurant.create!(
   user_id: 1,
@@ -39,6 +43,8 @@ Restaurant.create!(
   category: 'Ramen',
   location: 'Sydney',
   pricing: 'high',
+  image:
+    'https://cdn.cafeata.com/photos/photo_0x6b12a5a93f0bbe85_0x3e0c6206b2661e00_1625287217108523.jpg',
 )
 Restaurant.create!(
   user_id: 1,
@@ -48,6 +54,8 @@ Restaurant.create!(
   category: 'Ramen',
   location: 'Sydney',
   pricing: 'high',
+  image:
+    'https://cdn.cafeata.com/photos/photo_0x6b12a5a93f0bbe85_0x3e0c6206b2661e00_1625287217108523.jpg',
 )
 Restaurant.create!(
   user_id: 1,
@@ -57,6 +65,8 @@ Restaurant.create!(
   category: 'Burgers',
   location: 'Sydney',
   pricing: 'high',
+  image:
+    'https://cdn.cafeata.com/photos/photo_0x6b12a5a93f0bbe85_0x3e0c6206b2661e00_1625287217108523.jpg',
 )
 Restaurant.create!(
   user_id: 1,
@@ -66,6 +76,8 @@ Restaurant.create!(
   category: 'Burgers',
   location: 'Sydney',
   pricing: 'high',
+  image:
+    'https://cdn.cafeata.com/photos/photo_0x6b12a5a93f0bbe85_0x3e0c6206b2661e00_1625287217108523.jpg',
 )
 Restaurant.create!(
   user_id: 1,
@@ -75,6 +87,8 @@ Restaurant.create!(
   category: 'Pizza',
   location: 'Sydney',
   pricing: 'high',
+  image:
+    'https://cdn.cafeata.com/photos/photo_0x6b12a5a93f0bbe85_0x3e0c6206b2661e00_1625287217108523.jpg',
 )
 Restaurant.create!(
   user_id: 1,
@@ -84,6 +98,8 @@ Restaurant.create!(
   category: 'Pizza',
   location: 'Sydney',
   pricing: 'high',
+  image:
+    'https://cdn.cafeata.com/photos/photo_0x6b12a5a93f0bbe85_0x3e0c6206b2661e00_1625287217108523.jpg',
 )
 
 Review.create!(
