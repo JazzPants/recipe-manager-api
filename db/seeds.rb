@@ -33,7 +33,7 @@ Restaurant.create!(
   location: 'Sydney',
   pricing: 'low',
   image:
-    'https://cdn.cafeata.com/photos/photo_0x6b12a5a93f0bbe85_0x3e0c6206b2661e00_1625287217108523.jpg',
+    'https://b.zmtcdn.com/data/pictures/8/16565638/c429aa53df8f33c7ab43eb04512d85db.jpg?fit=around|750:500&crop=750:500;*,*',
 )
 Restaurant.create!(
   user_id: 1,
@@ -44,7 +44,7 @@ Restaurant.create!(
   location: 'Sydney',
   pricing: 'high',
   image:
-    'https://cdn.cafeata.com/photos/photo_0x6b12a5a93f0bbe85_0x3e0c6206b2661e00_1625287217108523.jpg',
+    'https://cdn.broadsheet.com.au/cache/97/f2/97f243568a99f4e73f291f55f16617e7.jpg',
 )
 Restaurant.create!(
   user_id: 1,
@@ -54,8 +54,7 @@ Restaurant.create!(
   category: 'Ramen',
   location: 'Sydney',
   pricing: 'high',
-  image:
-    'https://cdn.cafeata.com/photos/photo_0x6b12a5a93f0bbe85_0x3e0c6206b2661e00_1625287217108523.jpg',
+  image: 'http://www.ippudo.com.au/images/interior-557w.jpg',
 )
 Restaurant.create!(
   user_id: 1,
@@ -66,7 +65,7 @@ Restaurant.create!(
   location: 'Sydney',
   pricing: 'high',
   image:
-    'https://cdn.cafeata.com/photos/photo_0x6b12a5a93f0bbe85_0x3e0c6206b2661e00_1625287217108523.jpg',
+    'https://cdn.broadsheet.com.au/melbourne/images/2019/09/17/124055-3320-121924-1215-marysnewtown_nbeyrouti-29_2FTTZ3B.jpg',
 )
 Restaurant.create!(
   user_id: 1,
@@ -77,7 +76,7 @@ Restaurant.create!(
   location: 'Sydney',
   pricing: 'high',
   image:
-    'https://cdn.cafeata.com/photos/photo_0x6b12a5a93f0bbe85_0x3e0c6206b2661e00_1625287217108523.jpg',
+    'https://cdn.concreteplayground.com/content/uploads/2021/09/charcoal-fish-supplied-1-1920x1080.jpg',
 )
 Restaurant.create!(
   user_id: 1,
@@ -88,7 +87,7 @@ Restaurant.create!(
   location: 'Sydney',
   pricing: 'high',
   image:
-    'https://cdn.cafeata.com/photos/photo_0x6b12a5a93f0bbe85_0x3e0c6206b2661e00_1625287217108523.jpg',
+    'https://scontent.fsyd11-1.fna.fbcdn.net/v/t1.6435-9/150207229_114489190627565_2242664805825422851_n.jpg?_nc_cat=110&ccb=1-6&_nc_sid=730e14&_nc_ohc=Jp_-esVLY0kAX-Ewxuj&_nc_ht=scontent.fsyd11-1.fna&oh=00_AT_2aCjVb0o9Y7njq86Vs-k83p4-XAIL1rQQ08qJvAB1dQ&oe=62A13284',
 )
 Restaurant.create!(
   user_id: 1,
@@ -99,7 +98,7 @@ Restaurant.create!(
   location: 'Sydney',
   pricing: 'high',
   image:
-    'https://cdn.cafeata.com/photos/photo_0x6b12a5a93f0bbe85_0x3e0c6206b2661e00_1625287217108523.jpg',
+    'https://www.bestrestaurants.com.au/media/km0hqzvo/jpeg-image.jpg?width=1200&rnd=132862935838170000',
 )
 
 Review.create!(

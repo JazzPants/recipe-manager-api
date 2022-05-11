@@ -52,8 +52,6 @@ ActiveRecord::Schema.define(version: 4) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "ratings", "restaurants"
-  add_foreign_key "ratings", "users"
   add_foreign_key "restaurants", "users"
   add_foreign_key "reviews", "restaurants"
   add_foreign_key "reviews", "users"
